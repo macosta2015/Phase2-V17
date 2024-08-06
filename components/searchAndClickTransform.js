@@ -12,7 +12,7 @@ async function searchAndClickTransform(newPage) {
 
         console.log('Pressing Enter to search for "transform"...');
         await newPage.keyboard.press('Enter');
-        await newPage.waitForSelector('.context-menu-item-span', { visible: true });
+        // await newPage.waitForSelector('.context-menu-item-span', { visible: true });
 
         console.log('Completed the search and click process.');
 
