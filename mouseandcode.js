@@ -15,6 +15,8 @@ const searchAndClickCustomExtrude2 = require('./components/searchAndClickCustomE
 const searchAndClickExtrude = require('./components/searchAndClickExtrude.js');
 const selectCancelButton = require('./components/selectCancelButton.js');
 const selectOkButton = require('./components/selectOkButton.js');
+const assemblySelectButton = require('./components/assemblySelectButton.js');
+
 
 
 const { performRightClickOptionByTitle } = require('./components/performRightClickOptionByTitle.js');
@@ -34,6 +36,22 @@ require('events').EventEmitter.defaultMaxListeners = 20; // Set the maximum numb
 
         // Call the selectOkButton
         await selectOkButton(newPage);
+
+
+
+        //////////////////////////////////////////////////////////////////////////
+        console.log("Selec assemblySelectButton");
+        await waitForEnter();
+        console.log("Selec assemblySelectButton");
+        // Call the assemblySelectButton
+        await assemblySelectButton(newPage);
+        console.log("Selec assemblySelectButton");
+        await waitForEnter();
+        console.log("assemblySelectButton Assembly");
+        //////////////////////////////////////////////////////////////////////////
+
+
+
 
 
         //Working on (2) Extrude 1(4.00)
