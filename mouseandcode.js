@@ -34,23 +34,6 @@ require('events').EventEmitter.defaultMaxListeners = 20; // Set the maximum numb
         await selectOkButton(newPage);
 
 
-
-        //////////////////////////////////////////////////////////////////////////
-        // Logging and waiting for user input before selecting assembly button
-        console.log("Select assemblySelectButton");
-        await waitForEnter(); // Wait for user to press enter
-
-        // Call the assemblySelectButton
-        await assemblySelectButton(newPage);
-
-        // Logging and waiting for user input after selecting assembly button
-        console.log("assemblySelectButton Assembly");
-        await waitForEnter(); // Wait for user to press enter
-        //////////////////////////////////////////////////////////////////////////
-
-
-
-
         //Working on (2) Extrude 1(4.00)
         ////////////////////////////////////////////////////////////////////////////
         const selector = 'div[data-id="XgmGAQ7RqnVg1wa8"]'; // Replace with the appropriate selector
