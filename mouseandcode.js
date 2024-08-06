@@ -16,11 +16,7 @@ const searchAndClickExtrude = require('./components/searchAndClickExtrude.js');
 const selectCancelButton = require('./components/selectCancelButton.js');
 const selectOkButton = require('./components/selectOkButton.js');
 const assemblySelectButton = require('./components/assemblySelectButton.js');
-
-
-
 const { performRightClickOptionByTitle } = require('./components/performRightClickOptionByTitle.js');
-
 const waitForEnter = require('./components/waitForEnter.js');
 require('events').EventEmitter.defaultMaxListeners = 20; // Set the maximum number of listeners
 
@@ -40,16 +36,17 @@ require('events').EventEmitter.defaultMaxListeners = 20; // Set the maximum numb
 
 
         //////////////////////////////////////////////////////////////////////////
-        console.log("Selec assemblySelectButton");
-        await waitForEnter();
-        console.log("Selec assemblySelectButton");
+        // Logging and waiting for user input before selecting assembly button
+        console.log("Select assemblySelectButton");
+        await waitForEnter(); // Wait for user to press enter
+
         // Call the assemblySelectButton
         await assemblySelectButton(newPage);
-        console.log("Selec assemblySelectButton");
-        await waitForEnter();
-        console.log("assemblySelectButton Assembly");
-        //////////////////////////////////////////////////////////////////////////
 
+        // Logging and waiting for user input after selecting assembly button
+        console.log("assemblySelectButton Assembly");
+        await waitForEnter(); // Wait for user to press enter
+        //////////////////////////////////////////////////////////////////////////
 
 
 
